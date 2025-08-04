@@ -109,75 +109,203 @@
     <section class="featured-products" id="products">
         <div class="products-container">
             <h2 class="section-title">Featured Products</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-apple-alt"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Fresh Organic Apples</h3>
-                        <p class="product-price">$2.99/lb</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-drumstick-bite"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Chicken Breast</h3>
-                        <p class="product-price">$8.99/lb</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-bread-slice"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Artisan Bread</h3>
-                        <p class="product-price">$3.49</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-wine-bottle"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Fresh Orange Juice</h3>
-                        <p class="product-price">$4.99</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-cheese"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Cheddar Cheese</h3>
-                        <p class="product-price">$5.99/lb</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Organic Spinach</h3>
-                        <p class="product-price">$3.99/bag</p>
-                        <button class="add-to-cart">Add to Cart</button>
-                    </div>
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded dynamically from API -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading products...</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Product Detail Modal -->
+    <div class="product-modal" id="product-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-product-title">Product Details</h2>
+                <button class="close-modal" id="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="product-detail-container">
+                    <div class="product-image-section">
+                        <div class="product-image-large" id="modal-product-image">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <div class="product-quick-info">
+                            <h3 id="modal-product-name">Product Name</h3>
+                            <p class="product-price-large" id="modal-product-price">$0.00</p>
+                            <div class="product-rating" id="modal-product-rating">
+                                <i class="fas fa-star"></i>
+                                <span>0.0 (0 reviews)</span>
+                            </div>
+                            <div class="product-stock" id="modal-product-stock">
+                                <i class="fas fa-check-circle"></i>
+                                <span>In Stock</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-tab="description">Description</button>
+                            <button class="tab-btn" data-tab="nutrition">Nutrition</button>
+                            <button class="tab-btn" data-tab="details">Details</button>
+                            <button class="tab-btn" data-tab="reviews">Reviews</button>
+                        </div>
+                        
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="description-tab">
+                                <h4>Product Description</h4>
+                                <p id="modal-product-description">Product description will be loaded here.</p>
+                            </div>
+                            
+                            <div class="tab-pane" id="nutrition-tab">
+                                <h4>Nutritional Information</h4>
+                                <div class="nutrition-grid" id="nutrition-info">
+                                    <!-- Nutrition info will be loaded here -->
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane" id="details-tab">
+                                <h4>Product Details</h4>
+                                <div class="details-list" id="product-details">
+                                    <!-- Product details will be loaded here -->
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane" id="reviews-tab">
+                                <h4>Customer Reviews</h4>
+                                <div class="reviews-section" id="reviews-section">
+                                    <div class="review-summary">
+                                        <div class="rating-overview">
+                                            <div class="average-rating" id="average-rating">
+                                                <span class="rating-number">0.0</span>
+                                                <div class="stars">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                                <span class="total-reviews">0 reviews</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reviews-list" id="reviews-list">
+                                        <!-- Reviews will be loaded here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <label for="product-quantity">Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" id="qty-decrease">-</button>
+                                <input type="number" id="product-quantity" value="1" min="1" max="99">
+                                <button class="qty-btn" id="qty-increase">+</button>
+                            </div>
+                        </div>
+                        <button class="add-to-cart-modal" id="modal-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="payment-modal" id="payment-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Complete Your Order</h2>
+                <button class="close-modal" id="close-payment-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="checkout-container">
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        <div class="cart-items-summary" id="cart-items-summary">
+                            <!-- Cart items will be displayed here -->
+                        </div>
+                        <div class="order-total">
+                            <span>Total:</span>
+                            <span id="order-total-amount">$0.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="customer-info">
+                        <h3>Customer Information</h3>
+                        <form id="customer-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Delivery Address</label>
+                                <textarea id="address" rows="3" required></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="payment-section">
+                        <h3>Payment Information</h3>
+                        <form id="payment-form">
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="expiry">Expiry Date</label>
+                                    <input type="text" id="expiry" placeholder="MM/YY" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="text" id="cvv" placeholder="123" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="card-name">Name on Card</label>
+                                <input type="text" id="card-name" required>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="checkout-actions">
+                        <button class="btn-secondary" id="cancel-payment">Cancel</button>
+                        <button class="btn-primary" id="process-payment">
+                            <i class="fas fa-lock"></i>
+                            Process Payment
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">

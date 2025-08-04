@@ -1,0 +1,378 @@
+{
+  "categories": [
+    {
+      "id": "fruits-vegetables",
+      "name": "Fresh Fruits & Vegetables",
+      "icon": "fas fa-apple-alt",
+      "description": "Organic and fresh produce delivered daily"
+    },
+    {
+      "id": "meat-poultry",
+      "name": "Meat & Poultry",
+      "icon": "fas fa-drumstick-bite",
+      "description": "Premium quality meat and poultry products"
+    },
+    {
+      "id": "bakery",
+      "name": "Bakery & Bread",
+      "icon": "fas fa-bread-slice",
+      "description": "Freshly baked bread and pastries"
+    },
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "icon": "fas fa-wine-bottle",
+      "description": "Soft drinks, juices, and alcoholic beverages"
+    },
+    {
+      "id": "dairy",
+      "name": "Dairy & Eggs",
+      "icon": "fas fa-cheese",
+      "description": "Fresh dairy products and farm eggs"
+    },
+    {
+      "id": "household",
+      "name": "Household & Health",
+      "icon": "fas fa-pills",
+      "description": "Cleaning supplies and personal care items"
+    }
+  ],
+  "products": [
+    {
+      "id": "apple-organic",
+      "name": "Fresh Organic Apples",
+      "category": "fruits-vegetables",
+      "price": 2.99,
+      "unit": "lb",
+      "image": "fas fa-apple-alt",
+      "description": "Sweet and crisp organic apples, perfect for snacking or baking.",
+      "details": {
+        "nutrition": {
+          "calories": 95,
+          "protein": "0.5g",
+          "carbs": "25g",
+          "fiber": "4g",
+          "sugar": "19g",
+          "fat": "0.3g"
+        },
+        "ingredients": ["Organic Apples"],
+        "allergens": ["None"],
+        "storage": "Refrigerate for up to 2 weeks",
+        "origin": "Local Organic Farms",
+        "certifications": ["USDA Organic", "Non-GMO"]
+      },
+      "stock": 150,
+      "rating": 4.8,
+      "reviews": 124,
+      "tags": ["organic", "fresh", "local", "healthy"]
+    },
+    {
+      "id": "chicken-breast",
+      "name": "Chicken Breast",
+      "category": "meat-poultry",
+      "price": 8.99,
+      "unit": "lb",
+      "image": "fas fa-drumstick-bite",
+      "description": "Boneless, skinless chicken breast - perfect for healthy meals.",
+      "details": {
+        "nutrition": {
+          "calories": 165,
+          "protein": "31g",
+          "carbs": "0g",
+          "fiber": "0g",
+          "sugar": "0g",
+          "fat": "3.6g"
+        },
+        "ingredients": ["Chicken Breast"],
+        "allergens": ["None"],
+        "storage": "Refrigerate for 1-2 days, freeze for up to 6 months",
+        "origin": "Local Farms",
+        "certifications": ["USDA Approved"]
+      },
+      "stock": 75,
+      "rating": 4.6,
+      "reviews": 89,
+      "tags": ["protein", "lean", "healthy", "versatile"]
+    },
+    {
+      "id": "artisan-bread",
+      "name": "Artisan Bread",
+      "category": "bakery",
+      "price": 3.49,
+      "unit": "loaf",
+      "image": "fas fa-bread-slice",
+      "description": "Freshly baked artisan bread with a crispy crust and soft interior.",
+      "details": {
+        "nutrition": {
+          "calories": 265,
+          "protein": "9g",
+          "carbs": "49g",
+          "fiber": "3g",
+          "sugar": "2g",
+          "fat": "3.2g"
+        },
+        "ingredients": ["Flour", "Water", "Salt", "Yeast"],
+        "allergens": ["Wheat", "Gluten"],
+        "storage": "Store at room temperature for 3-5 days",
+        "origin": "Local Bakery",
+        "certifications": ["Fresh Daily"]
+      },
+      "stock": 45,
+      "rating": 4.9,
+      "reviews": 156,
+      "tags": ["fresh", "artisan", "bakery", "traditional"]
+    },
+    {
+      "id": "orange-juice",
+      "name": "Fresh Orange Juice",
+      "category": "beverages",
+      "price": 4.99,
+      "unit": "bottle",
+      "image": "fas fa-wine-bottle",
+      "description": "100% pure orange juice, freshly squeezed and pasteurized.",
+      "details": {
+        "nutrition": {
+          "calories": 111,
+          "protein": "1.7g",
+          "carbs": "26g",
+          "fiber": "0.5g",
+          "sugar": "21g",
+          "fat": "0.5g"
+        },
+        "ingredients": ["Orange Juice"],
+        "allergens": ["None"],
+        "storage": "Refrigerate after opening, consume within 7 days",
+        "origin": "Florida Oranges",
+        "certifications": ["100% Pure", "No Added Sugar"]
+      },
+      "stock": 60,
+      "rating": 4.7,
+      "reviews": 203,
+      "tags": ["fresh", "natural", "vitamin-c", "healthy"]
+    },
+    {
+      "id": "cheddar-cheese",
+      "name": "Cheddar Cheese",
+      "category": "dairy",
+      "price": 5.99,
+      "unit": "lb",
+      "image": "fas fa-cheese",
+      "description": "Aged cheddar cheese with rich, sharp flavor perfect for cooking or snacking.",
+      "details": {
+        "nutrition": {
+          "calories": 402,
+          "protein": "25g",
+          "carbs": "1.3g",
+          "fiber": "0g",
+          "sugar": "0.5g",
+          "fat": "33g"
+        },
+        "ingredients": ["Milk", "Salt", "Enzymes", "Bacterial Culture"],
+        "allergens": ["Milk"],
+        "storage": "Refrigerate for up to 6 weeks",
+        "origin": "Wisconsin Dairy",
+        "certifications": ["USDA Grade A"]
+      },
+      "stock": 90,
+      "rating": 4.5,
+      "reviews": 78,
+      "tags": ["aged", "sharp", "versatile", "protein"]
+    },
+    {
+      "id": "organic-spinach",
+      "name": "Organic Spinach",
+      "category": "fruits-vegetables",
+      "price": 3.99,
+      "unit": "bag",
+      "image": "fas fa-leaf",
+      "description": "Fresh organic spinach leaves, perfect for salads, smoothies, or cooking.",
+      "details": {
+        "nutrition": {
+          "calories": 23,
+          "protein": "2.9g",
+          "carbs": "3.6g",
+          "fiber": "2.2g",
+          "sugar": "0.4g",
+          "fat": "0.4g"
+        },
+        "ingredients": ["Organic Spinach"],
+        "allergens": ["None"],
+        "storage": "Refrigerate for up to 1 week",
+        "origin": "Local Organic Farms",
+        "certifications": ["USDA Organic", "Non-GMO"]
+      },
+      "stock": 120,
+      "rating": 4.8,
+      "reviews": 167,
+      "tags": ["organic", "leafy-greens", "healthy", "iron-rich"]
+    },
+    {
+      "id": "bananas",
+      "name": "Organic Bananas",
+      "category": "fruits-vegetables",
+      "price": 1.99,
+      "unit": "bunch",
+      "image": "fas fa-apple-alt",
+      "description": "Sweet organic bananas, perfect for snacking or baking.",
+      "details": {
+        "nutrition": {
+          "calories": 105,
+          "protein": "1.3g",
+          "carbs": "27g",
+          "fiber": "3.1g",
+          "sugar": "14g",
+          "fat": "0.4g"
+        },
+        "ingredients": ["Organic Bananas"],
+        "allergens": ["None"],
+        "storage": "Store at room temperature until ripe, then refrigerate",
+        "origin": "Ecuador",
+        "certifications": ["USDA Organic", "Fair Trade"]
+      },
+      "stock": 200,
+      "rating": 4.9,
+      "reviews": 234,
+      "tags": ["organic", "sweet", "potassium", "energy"]
+    },
+    {
+      "id": "salmon-fillet",
+      "name": "Atlantic Salmon Fillet",
+      "category": "meat-poultry",
+      "price": 12.99,
+      "unit": "lb",
+      "image": "fas fa-drumstick-bite",
+      "description": "Fresh Atlantic salmon fillet, rich in omega-3 fatty acids.",
+      "details": {
+        "nutrition": {
+          "calories": 208,
+          "protein": "25g",
+          "carbs": "0g",
+          "fiber": "0g",
+          "sugar": "0g",
+          "fat": "12g"
+        },
+        "ingredients": ["Atlantic Salmon"],
+        "allergens": ["Fish"],
+        "storage": "Refrigerate for 1-2 days, freeze for up to 3 months",
+        "origin": "Atlantic Ocean",
+        "certifications": ["Wild Caught", "Sustainable"]
+      },
+      "stock": 40,
+      "rating": 4.7,
+      "reviews": 92,
+      "tags": ["omega-3", "protein", "healthy", "wild-caught"]
+    },
+    {
+      "id": "whole-milk",
+      "name": "Organic Whole Milk",
+      "category": "dairy",
+      "price": 4.49,
+      "unit": "gallon",
+      "image": "fas fa-cheese",
+      "description": "Fresh organic whole milk from grass-fed cows.",
+      "details": {
+        "nutrition": {
+          "calories": 149,
+          "protein": "8g",
+          "carbs": "12g",
+          "fiber": "0g",
+          "sugar": "12g",
+          "fat": "8g"
+        },
+        "ingredients": ["Organic Whole Milk"],
+        "allergens": ["Milk"],
+        "storage": "Refrigerate for up to 1 week",
+        "origin": "Local Dairy Farms",
+        "certifications": ["USDA Organic", "Grass-Fed"]
+      },
+      "stock": 85,
+      "rating": 4.6,
+      "reviews": 145,
+      "tags": ["organic", "calcium", "protein", "grass-fed"]
+    },
+    {
+      "id": "chocolate-chip-cookies",
+      "name": "Chocolate Chip Cookies",
+      "category": "bakery",
+      "price": 5.99,
+      "unit": "dozen",
+      "image": "fas fa-bread-slice",
+      "description": "Freshly baked chocolate chip cookies with real chocolate chips.",
+      "details": {
+        "nutrition": {
+          "calories": 150,
+          "protein": "2g",
+          "carbs": "18g",
+          "fiber": "1g",
+          "sugar": "10g",
+          "fat": "8g"
+        },
+        "ingredients": ["Flour", "Butter", "Sugar", "Chocolate Chips", "Eggs", "Vanilla"],
+        "allergens": ["Wheat", "Eggs", "Milk"],
+        "storage": "Store in airtight container for up to 1 week",
+        "origin": "Local Bakery",
+        "certifications": ["Fresh Daily"]
+      },
+      "stock": 30,
+      "rating": 4.8,
+      "reviews": 189,
+      "tags": ["sweet", "chocolate", "bakery", "indulgent"]
+    },
+    {
+      "id": "green-tea",
+      "name": "Organic Green Tea",
+      "category": "beverages",
+      "price": 6.99,
+      "unit": "box",
+      "image": "fas fa-wine-bottle",
+      "description": "Premium organic green tea with antioxidants and natural flavor.",
+      "details": {
+        "nutrition": {
+          "calories": 0,
+          "protein": "0g",
+          "carbs": "0g",
+          "fiber": "0g",
+          "sugar": "0g",
+          "fat": "0g"
+        },
+        "ingredients": ["Organic Green Tea Leaves"],
+        "allergens": ["None"],
+        "storage": "Store in cool, dry place",
+        "origin": "Japan",
+        "certifications": ["USDA Organic", "Antioxidant Rich"]
+      },
+      "stock": 100,
+      "rating": 4.9,
+      "reviews": 267,
+      "tags": ["organic", "antioxidants", "healthy", "calming"]
+    },
+    {
+      "id": "dish-soap",
+      "name": "Natural Dish Soap",
+      "category": "household",
+      "price": 3.99,
+      "unit": "bottle",
+      "image": "fas fa-pills",
+      "description": "Natural dish soap with plant-based ingredients, gentle on hands.",
+      "details": {
+        "nutrition": {
+          "calories": 0,
+          "protein": "0g",
+          "carbs": "0g",
+          "fiber": "0g",
+          "sugar": "0g",
+          "fat": "0g"
+        },
+        "ingredients": ["Plant-based Surfactants", "Essential Oils", "Water"],
+        "allergens": ["None"],
+        "storage": "Store at room temperature",
+        "origin": "USA",
+        "certifications": ["Natural", "Biodegradable", "Cruelty-Free"]
+      },
+      "stock": 150,
+      "rating": 4.4,
+      "reviews": 78,
+      "tags": ["natural", "eco-friendly", "gentle", "plant-based"]
+    }
+  ]
+} 

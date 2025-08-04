@@ -5,18 +5,50 @@ A modern digital platform for purchasing supermarket supplies online. TheMarket4
 ## 🛒 Features
 
 - **Online Shopping**: Browse and purchase supermarket supplies digitally
-- **Product Catalog**: Comprehensive inventory of groceries and household items
+- **Product Catalog**: Comprehensive inventory of groceries and household items with detailed product information
+- **Product Detail Tabs**: View detailed product information including nutrition facts, ingredients, storage instructions, and customer reviews
+- **API Integration**: Complete backend API for product management, orders, and payments
+- **Payment Processing**: Secure payment processing with credit card support
 - **User-Friendly Interface**: Intuitive design for easy navigation
-- **Secure Transactions**: Safe payment processing for online purchases
 - **Order Management**: Track and manage your orders efficiently
 - **Responsive Design**: Works seamlessly across desktop and mobile devices
+- **Search Functionality**: Find products quickly with advanced search capabilities
+- **Cart Management**: Add, remove, and manage items in your shopping cart
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 - Modern web browser (Chrome, Firefox, Safari, Edge)
+- Node.js (version 14 or higher) - for API functionality
+- npm or yarn package manager
 - Internet connection for online shopping
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/themarket4all.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd themarket4all
+   ```
+
+3. Install dependencies (for API functionality):
+   ```bash
+   npm install
+   ```
+
+4. Start the API server:
+   ```bash
+   npm start
+   ```
+
+5. Open `http://localhost:3000` in your web browser to view the website with full functionality.
+
+**Note**: For frontend-only usage, you can open `index.html` directly in your browser, but API features will be limited.
 
 ## 📱 Usage
 
@@ -29,6 +61,10 @@ A modern digital platform for purchasing supermarket supplies online. TheMarket4
 ## 🛠️ Technology Stack
 
 - **Frontend**: HTML5, CSS3, JavaScript
+- **Backend**: Node.js, Express.js
+- **API**: RESTful API with JSON data
+- **Database**: JSON-based product database (expandable to MongoDB/PostgreSQL)
+- **Payment**: Simulated payment processing (ready for Stripe/PayPal integration)
 - **Design**: Modern, responsive web design
 - **Compatibility**: Cross-browser support
 
@@ -36,9 +72,15 @@ A modern digital platform for purchasing supermarket supplies online. TheMarket4
 
 ```
 themarket4all/
-├── index.html          # Main website entry point
-├── README.md           # Project documentation
-└── LICENSE             # Project license
+├── index.html              # Main website entry point
+├── style.css               # CSS styles and animations
+├── script.js               # JavaScript functionality
+├── products.json           # Product database
+├── server.js               # API server
+├── package.json            # Node.js dependencies
+├── API_README.md           # API documentation
+├── README.md               # Project documentation
+└── LICENSE                 # Project license
 ```
 
 ## 🤝 Contributing
