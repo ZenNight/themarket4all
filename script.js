@@ -84,17 +84,20 @@ function setupEventListeners() {
         card.addEventListener('click', handleProductClick);
     });
 
-            // Logo click
-        const logo = document.querySelector('.logo');
-        if (logo) {
-            logo.addEventListener('click', () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        }
-
-        // Load products from API
-        loadProductsFromAPI();
+    // Logo click
+    const logo = document.querySelector('.logo');
+    if (logo) {
+        logo.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     }
+
+    // Setup modal event listeners
+    setupModalEventListeners();
+
+    // Load products from API
+    loadProductsFromAPI();
+}
 
 // ===== MOBILE MENU FUNCTIONALITY =====
 function toggleMobileMenu() {
@@ -924,22 +927,37 @@ function setupModalEventListeners() {
     const cancelPayment = document.getElementById('cancel-payment');
     const processPayment = document.getElementById('process-payment');
 
-    if (closeModal) {
+    console.log('Setting up modal event listeners...');
+    console.log('Product modal:', productModal);
+    console.log('Close modal button:', closeModal);
+    console.log('Payment modal:', paymentModal);
+    console.log('Close payment modal button:', closePaymentModal);
+
+    if (closeModal && productModal) {
         closeModal.addEventListener('click', () => {
+            console.log('Product modal close button clicked');
             productModal.style.display = 'none';
         });
+    } else {
+        console.warn('Product modal or close button not found');
     }
 
-    if (closePaymentModal) {
+    if (closePaymentModal && paymentModal) {
         closePaymentModal.addEventListener('click', () => {
+            console.log('Payment modal close button clicked');
             paymentModal.style.display = 'none';
         });
+    } else {
+        console.warn('Payment modal or close button not found');
     }
 
-    if (cancelPayment) {
+    if (cancelPayment && paymentModal) {
         cancelPayment.addEventListener('click', () => {
+            console.log('Payment modal cancel button clicked');
             paymentModal.style.display = 'none';
         });
+    } else {
+        console.warn('Payment modal or cancel button not found');
     }
 
     if (processPayment) {
@@ -956,7 +974,7 @@ function setupModalEventListeners() {
     const qtyIncrease = document.getElementById('qty-increase');
     const qtyInput = document.getElementById('product-quantity');
 
-    if (qtyDecrease) {
+    if (qtyDecrease && qtyInput) {
         qtyDecrease.addEventListener('click', () => {
             const currentValue = parseInt(qtyInput.value);
             if (currentValue > 1) {
@@ -965,7 +983,7 @@ function setupModalEventListeners() {
         });
     }
 
-    if (qtyIncrease) {
+    if (qtyIncrease && qtyInput) {
         qtyIncrease.addEventListener('click', () => {
             const currentValue = parseInt(qtyInput.value);
             if (currentValue < 99) {
@@ -982,10 +1000,10 @@ function setupModalEventListeners() {
 
     // Close modals when clicking outside
     window.addEventListener('click', (e) => {
-        if (e.target === productModal) {
+        if (productModal && e.target === productModal) {
             productModal.style.display = 'none';
         }
-        if (e.target === paymentModal) {
+        if (paymentModal && e.target === paymentModal) {
             paymentModal.style.display = 'none';
         }
     });

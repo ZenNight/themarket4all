@@ -816,10 +816,18 @@ body {
             font-size: 1.5rem;
             cursor: pointer;
             transition: transform 0.3s ease;
+            padding: 0.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 40px;
+            min-height: 40px;
         }
 
         .close-modal:hover {
             transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .modal-body {
